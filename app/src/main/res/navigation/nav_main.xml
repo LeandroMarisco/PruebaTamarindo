@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    android:label="nav_main"
+    app:startDestination="@id/firstView">
+
+    <fragment
+        android:id="@+id/firstView"
+        android:name="com.example.AppTamarindoFragment.View.ui.fragments.FirstView"
+        android:label="first_view"
+        tools:layout="@layout/fragment_first_view">
+        <action
+            android:id="@+id/action_firstView_to_imageDetail"
+            app:destination="@id/imageDetail"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_firstView_to_imageDetail2"
+            app:destination="@id/imageDetail"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_firstView_to_otros"
+            app:destination="@id/otros_fragments" />
+        <action
+            android:id="@+id/action_firstView_to_imageDetail3"
+            app:destination="@id/imageDetail" />
+        <action
+            android:id="@+id/action_firstView_to_percherosFragment"
+            app:destination="@id/percherosFragment" />
+        <action
+            android:id="@+id/action_firstView_to_mesasFragment"
+            app:destination="@id/mesasFragment" />
+        <action
+            android:id="@+id/action_firstView_to_estanteriasFragment"
+            app:destination="@id/estanteriasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondView"
+        android:name="com.example.AppTamarindoFragment.View.ui.fragments.SecondView"
+        android:label="second_view"
+        tools:layout="@layout/fragment_second_view" />
+    <fragment
+        android:id="@+id/imageDetail"
+        android:name="com.example.AppTamarindoFragment.View.ui.fragments.ImageDetail"
+        android:label="image_detail"
+        tools:layout="@layout/fragment_image_detail" />
+    <fragment
+        android:id="@+id/otros_fragments"
+        android:name="com.example.AppTamarindoFragment.View.ui.fragments.OtrosFragmens"
+        android:label="otros_fragments"
+        tools:layout="@layout/recycler_list_detalle_fragmens">
+        <action
+            android:id="@+id/action_listDetalleFragmens_to_imageDetail"
+            app:destination="@id/imageDetail" />
+        <action
+            android:id="@+id/action_listDetalleFragmens_to_secondView"
+            app:destination="@id/secondView" />
+    </fragment>
+    <fragment
+        android:id="@+id/estanteriasFragment"
+        android:name="com.example.AppTamarindoFragment.View.ui.fragments.EstanteriasFragment"
+        android:label="fragment_estanterias"
+        tools:layout="@layout/fragment_estanterias" >
+        <action
+            android:id="@+id/action_estanteriasFragment_to_imageDetail"
+            app:destination="@id/imageDetail" />
+        <action
+            android:id="@+id/action_estanteriasFragment_to_secondView"
+            app:destination="@id/secondView" />
+    </fragment>
+    <fragment
+        android:id="@+id/mesasFragment"
+        android:name="com.example.AppTamarindoFragment.View.ui.fragments.MesasFragment"
+        android:label="fragment_mesas"
+        tools:layout="@layout/fragment_mesas" >
+        <action
+            android:id="@+id/action_mesasFragment_to_imageDetail"
+            app:destination="@id/imageDetail" />
+        <action
+            android:id="@+id/action_mesasFragment_to_secondView"
+            app:destination="@id/secondView" />
+    </fragment>
+    <fragment
+        android:id="@+id/percherosFragment"
+        android:name="com.example.AppTamarindoFragment.View.ui.fragments.PercherosFragment"
+        android:label="fragment_percheros"
+        tools:layout="@layout/fragment_percheros" >
+        <action
+            android:id="@+id/action_percherosFragment_to_imageDetail"
+            app:destination="@id/imageDetail" />
+        <action
+            android:id="@+id/action_percherosFragment_to_secondView"
+            app:destination="@id/secondView" />
+    </fragment>
+</navigation>
