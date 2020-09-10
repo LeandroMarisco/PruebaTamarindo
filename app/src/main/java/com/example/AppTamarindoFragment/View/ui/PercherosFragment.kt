@@ -1,4 +1,4 @@
-package com.example.AppTamarindoFragment.View.ui.fragments
+package com.example.AppTamarindoFragment.View.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,12 +13,11 @@ import com.example.AppTamarindoFragment.model.RecyclerAdapterList
 import com.example.varios.Clases.TipoDeMueble
 import kotlinx.android.synthetic.main.recycler_list_detalle_fragmens.*
 
-class EstanteriasFragment : Fragment(), RecyclerAdapterList.OnClickListener {
+class PercherosFragment : Fragment(), RecyclerAdapterList.OnClickListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -31,37 +30,45 @@ class EstanteriasFragment : Fragment(), RecyclerAdapterList.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
-    }
 
-    private fun setupRecyclerView() {
-        Listrecycler_fragment.adapter = RecyclerAdapterList(requireContext(), addEstanterias(), this)
-        Listrecycler_fragment.layoutManager = LinearLayoutManager(requireContext())
-        Listrecycler_fragment.addItemDecoration(DividerItemDecoration(requireContext(),DividerItemDecoration.VERTICAL))
     }
 
     override fun onImageClick(foto: Int) {
         val bundle = Bundle()
         bundle.putInt("foto", foto)
-        findNavController().navigate(R.id.action_estanteriasFragment_to_imageDetail, bundle)    }
+        findNavController().navigate(R.id.action_percherosFragment_to_imageDetail, bundle)
+    }
 
-    override fun onItemClik(name: String, foto: Int, cod: Int) {
+    override fun onItemClik(name: String, foto: Int, cod: String) {
         val bundle = Bundle()
         bundle.putInt("foto", foto)
         bundle.putString("nombre", name)
-        bundle.putInt("cod", cod)
-        findNavController().navigate(R.id.action_estanteriasFragment_to_secondView, bundle)
+        bundle.putString("cod", cod)
+        findNavController().navigate(R.id.action_percherosFragment_to_secondView, bundle)
+
     }
 
-    private fun addEstanterias(): ArrayList<TipoDeMueble> {
+    private fun setupRecyclerView() {
+        Listrecycler_fragment.layoutManager = LinearLayoutManager(requireContext())
+        Listrecycler_fragment.adapter = RecyclerAdapterList(requireContext(), addPercheros(), this)
+
+        Listrecycler_fragment.addItemDecoration(
+            DividerItemDecoration(
+                requireContext(),
+                DividerItemDecoration.VERTICAL
+            )
+        )
+    }
+
+    private fun addPercheros(): ArrayList<TipoDeMueble> {
         return object : ArrayList<TipoDeMueble>() {
             init {
-                add(TipoDeMueble("Bachiller", 576231, R.drawable.estanteria1))
-                add(TipoDeMueble("Lienzo", 797331, R.drawable.estanteria2))
-                add(TipoDeMueble("Stanly", 573521, R.drawable.estanteria4))
-                add(TipoDeMueble("Paraiso", 123568, R.drawable.estanteria3))
-                add(TipoDeMueble("Bari", 18754, R.drawable.mesa7))
-                add(TipoDeMueble("forlan", 4657445, R.drawable.estanterias))
+                add(TipoDeMueble("Erico", "95111", R.drawable.perchero1))
+                add(TipoDeMueble("Nompa", "32145", R.drawable.perchero2))
+                add(TipoDeMueble("Willy", "45913", R.drawable.perchero3))
+                add(TipoDeMueble("Kun", "122544", R.drawable.perchero))
             }
         }
     }
+
 }

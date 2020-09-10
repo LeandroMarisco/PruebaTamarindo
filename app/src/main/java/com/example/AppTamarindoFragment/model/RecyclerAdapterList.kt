@@ -20,7 +20,7 @@ class RecyclerAdapterList(
 
     interface OnClickListener {
         fun onImageClick(foto: Int)
-        fun onItemClik( name: String, foto: Int, cod: Int)
+        fun onItemClik( name: String, foto: Int, cod: String)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<*> {

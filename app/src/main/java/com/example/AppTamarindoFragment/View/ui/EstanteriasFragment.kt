@@ -1,4 +1,4 @@
-package com.example.AppTamarindoFragment.View.ui.fragments
+package com.example.AppTamarindoFragment.View.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,7 +13,7 @@ import com.example.AppTamarindoFragment.model.RecyclerAdapterList
 import com.example.varios.Clases.TipoDeMueble
 import kotlinx.android.synthetic.main.recycler_list_detalle_fragmens.*
 
-class MesasFragment : Fragment(), RecyclerAdapterList.OnClickListener {
+class EstanteriasFragment : Fragment(), RecyclerAdapterList.OnClickListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +21,10 @@ class MesasFragment : Fragment(), RecyclerAdapterList.OnClickListener {
 
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.recycler_list_detalle_fragmens, container, false)
     }
 
@@ -32,40 +34,34 @@ class MesasFragment : Fragment(), RecyclerAdapterList.OnClickListener {
     }
 
     private fun setupRecyclerView() {
-        Listrecycler_fragment.adapter = RecyclerAdapterList(requireContext(), addMesas(), this)
+        Listrecycler_fragment.adapter = RecyclerAdapterList(requireContext(), addEstanterias(), this)
         Listrecycler_fragment.layoutManager = LinearLayoutManager(requireContext())
-        Listrecycler_fragment.addItemDecoration(DividerItemDecoration(requireContext(),DividerItemDecoration.VERTICAL)
-        )
+        Listrecycler_fragment.addItemDecoration(DividerItemDecoration(requireContext(),DividerItemDecoration.VERTICAL))
     }
 
     override fun onImageClick(foto: Int) {
         val bundle = Bundle()
         bundle.putInt("foto", foto)
-        findNavController().navigate(R.id.action_mesasFragment_to_imageDetail, bundle)
-    }
+        findNavController().navigate(R.id.action_estanteriasFragment_to_imageDetail, bundle)    }
 
-
-    override fun onItemClik(name: String, foto: Int, cod:Int) {
+    override fun onItemClik(name: String, foto: Int, cod: String) {
         val bundle = Bundle()
         bundle.putInt("foto", foto)
         bundle.putString("nombre", name)
-        bundle.putInt("cod", cod)
-        findNavController().navigate(R.id.action_mesasFragment_to_secondView, bundle)
-
+        bundle.putString("cod", cod)
+        findNavController().navigate(R.id.action_estanteriasFragment_to_secondView, bundle)
     }
 
-    private fun addMesas(): ArrayList<TipoDeMueble> {
+    private fun addEstanterias(): ArrayList<TipoDeMueble> {
         return object : ArrayList<TipoDeMueble>() {
             init {
-                add(TipoDeMueble("Simon", 65440, R.drawable.mesa1))
-                add(TipoDeMueble("Amelie", 58710, R.drawable.mesa2))
-                add(TipoDeMueble("Malevo", 78678, R.drawable.mesa3))
-                add(TipoDeMueble("Chari", 25710, R.drawable.mesa4))
-                add(TipoDeMueble("Bari", 18754, R.drawable.mesa7))
-                add(TipoDeMueble("Nieve", 34125, R.drawable.mesa8))
+                add(TipoDeMueble("Bachiller", "576231", R.drawable.estanteria1))
+                add(TipoDeMueble("Lienzo", "797331", R.drawable.estanteria2))
+                add(TipoDeMueble("Stanly", "573521", R.drawable.estanteria4))
+                add(TipoDeMueble("Paraiso", "123568", R.drawable.estanteria3))
+                add(TipoDeMueble("Bari", "18754", R.drawable.mesa7))
+                add(TipoDeMueble("forlan", "4657445", R.drawable.estanterias))
             }
         }
-
     }
-
 }

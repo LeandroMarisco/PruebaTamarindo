@@ -1,4 +1,4 @@
-package com.example.AppTamarindoFragment.View.ui.fragments
+package com.example.AppTamarindoFragment.View.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

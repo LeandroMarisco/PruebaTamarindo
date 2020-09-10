@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/firstView"
-        android:name="com.example.AppTamarindoFragment.View.ui.fragments.FirstView"
+        android:name="com.example.AppTamarindoFragment.View.ui.FirstView"
         android:label="first_view"
         tools:layout="@layout/fragment_first_view">
         <action
@@ -39,17 +39,17 @@
     </fragment>
     <fragment
         android:id="@+id/secondView"
-        android:name="com.example.AppTamarindoFragment.View.ui.fragments.SecondView"
+        android:name="com.example.AppTamarindoFragment.View.ui.SecondView"
         android:label="second_view"
         tools:layout="@layout/fragment_second_view" />
     <fragment
         android:id="@+id/imageDetail"
-        android:name="com.example.AppTamarindoFragment.View.ui.fragments.ImageDetail"
+        android:name="com.example.AppTamarindoFragment.View.ui.ImageDetail"
         android:label="image_detail"
         tools:layout="@layout/fragment_image_detail" />
     <fragment
         android:id="@+id/otros_fragments"
-        android:name="com.example.AppTamarindoFragment.View.ui.fragments.OtrosFragmens"
+        android:name="com.example.AppTamarindoFragment.View.ui.OtrosFragmens"
         android:label="otros_fragments"
         tools:layout="@layout/recycler_list_detalle_fragmens">
         <action
@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/estanteriasFragment"
-        android:name="com.example.AppTamarindoFragment.View.ui.fragments.EstanteriasFragment"
+        android:name="com.example.AppTamarindoFragment.View.ui.EstanteriasFragment"
         android:label="fragment_estanterias"
         tools:layout="@layout/fragment_estanterias" >
         <action
@@ -73,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/mesasFragment"
-        android:name="com.example.AppTamarindoFragment.View.ui.fragments.MesasFragment"
+        android:name="com.example.AppTamarindoFragment.View.ui.MesasFragment"
         android:label="fragment_mesas"
         tools:layout="@layout/fragment_mesas" >
         <action
@@ -85,7 +85,7 @@
     </fragment>
     <fragment
         android:id="@+id/percherosFragment"
-        android:name="com.example.AppTamarindoFragment.View.ui.fragments.PercherosFragment"
+        android:name="com.example.AppTamarindoFragment.View.ui.PercherosFragment"
         android:label="fragment_percheros"
         tools:layout="@layout/fragment_percheros" >
         <action

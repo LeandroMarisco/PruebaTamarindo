@@ -1,4 +1,4 @@
-package com.example.AppTamarindoFragment.View.ui.fragments
+package com.example.AppTamarindoFragment.View.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -76,11 +76,11 @@ class OtrosFragmens : Fragment(), RecyclerAdapterList.OnClickListener {
         findNavController().navigate(R.id.action_listDetalleFragmens_to_imageDetail, bundle)
     }
 
-    override fun onItemClik(name: String, foto: Int, cod: Int) {
+    override fun onItemClik(name: String, foto: Int, cod: String) {
         val bundle = Bundle()
         bundle.putInt("foto", foto)
         bundle.putString("nombre", name)
-        bundle.putInt("cod", cod)
+        bundle.putString("cod", cod)
         findNavController().navigate(R.id.action_listDetalleFragmens_to_secondView, bundle)
 
     }
@@ -100,13 +100,13 @@ class OtrosFragmens : Fragment(), RecyclerAdapterList.OnClickListener {
     private fun addOtros(): ArrayList<TipoDeMueble> {
         return object : ArrayList<TipoDeMueble>() {
             init {
-                add(TipoDeMueble("Boedo", 95111, R.drawable.otros1))
-                add(TipoDeMueble("Praga", 32145, R.drawable.otros2))
-                add(TipoDeMueble("Oslo", 459143, R.drawable.otros3))
-                add(TipoDeMueble("Cali", 122544, R.drawable.otros4))
-                add(TipoDeMueble("Lima", 122544, R.drawable.otros5))
-                add(TipoDeMueble("Lyon", 122544, R.drawable.otros6))
-                add(TipoDeMueble("Lyon", 122544, R.drawable.otros6))
+                add(TipoDeMueble("Boedo", "95111", R.drawable.otros1))
+                add(TipoDeMueble("Praga", "32145", R.drawable.otros2))
+                add(TipoDeMueble("Oslo", "459143", R.drawable.otros3))
+                add(TipoDeMueble("Cali", "122544", R.drawable.otros4))
+                add(TipoDeMueble("Lima", "128544", R.drawable.otros5))
+                add(TipoDeMueble("Lyon", "125544", R.drawable.otros6))
+                add(TipoDeMueble("Lyon", "13544", R.drawable.otros6))
             }
         }
     }

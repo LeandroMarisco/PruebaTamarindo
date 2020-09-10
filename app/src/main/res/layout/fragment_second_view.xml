@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".View.ui.fragments.SecondView"
+    tools:context=".View.ui.SecondView"
+    android:gravity="center"
     android:padding="8dp">
 
     <TextView
@@ -14,9 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:hint="@string/nombre_mueble"
-        android:layout_marginBottom="24dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
- />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
 
     <ImageView
         android:id="@+id/fotoDetalleFra"
@@ -33,8 +32,10 @@
         android:layout_marginTop="32dp"
         android:text="@string/codigo"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
-
 </LinearLayout>
+
+
+
 
 
 

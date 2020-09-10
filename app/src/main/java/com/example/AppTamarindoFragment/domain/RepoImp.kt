@@ -3,7 +3,7 @@ package com.example.AppTamarindoFragment.base
 
 import android.content.ContentValues.TAG
 import android.util.Log
-import com.example.AppTamarindoFragment.View.ui.fragments.OtrosFragmens
+import com.example.AppTamarindoFragment.View.ui.OtrosFragmens
 import com.example.AppTamarindoFragment.model.DataSource
 import com.example.varios.Clases.TipoDeMueble
 
